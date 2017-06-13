@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 
 namespace SportStore.Domain.Entities
 {
-    class ShippingDetails
+    public class ShippingDetails
     {
         [Required(ErrorMessage ="Por favor inserte el Nombre")]
         public string Name { get; set; }
 
         [Required(ErrorMessage ="Por favor agregue la primera línea de dirección")]
+        [Display(Name ="Linea 1")]
         public string Line1 { get; set; }
+        [Display(Name = "Linea 2")]
         public string Line2 { get; set; }
+        [Display(Name = "Linea 3")]
         public string Line3 { get; set; }
 
         [Required(ErrorMessage ="Por favopr introduzca el nombre de la Ciudad")]
